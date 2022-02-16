@@ -1,0 +1,446 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+* {
+    font-family: Poppins,sans-serif;
+    scrollbar-width: thin;
+  }
+  
+  .linePreloader {
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(315deg, #00b712 0, #5aff15 74%);
+    background-color: #ccc;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 4px;
+    background-size: 20%;
+    background-repeat: repeat-y;
+    background-position: -25% 0;
+    animation: scroll 1s ease-in-out infinite;
+    z-index: 2000;
+  }
+  
+  @keyframes scroll {
+    50% {
+      background-size: 80%;
+    }
+  
+    100% {
+      background-position: 125% 0;
+    }
+  }
+  
+  .mydiv {
+    height: 100%;
+    z-index: 2001;
+    background-color: var(--background);
+  }
+  
+  .light {
+    --background:white;
+    --text:#007bff;
+    --bolds:#707a84;
+    --shadows:0,0,0;
+    --normal-text:black;
+    --bordercolor:#c5c7c7;
+    --inbox-color: #E1DFE1;
+    --inbox-cap-color: #E1DFE1;
+    --pre-line-bg: #d5d5d5;
+    --code-bg : #ffffff;
+    --number-txt-color:black;
+    --box-shads: 256,256,256;
+    --normal-code:#00959b;
+    --keyword-code: #c100ff;
+    --comment: #0071ff;
+  }
+  
+  .dark {
+    --background:#15202b;
+    --text:white;
+    --bolds:white;
+    --shadows:256,256,256;
+    --normal-text:white;
+    --bordercolor:#68686d;
+    --inbox-color: rgb(22, 22, 22);
+    --inbox-cap-color: black;
+    --pre-line-bg: #111;
+    --code-bg : #161b22;
+    --number-txt-color:#777;
+    --box-shads: 0,0,0;
+    --normal-code:#a9b7c6;
+    --keyword-code : #569CD6;
+    --comment: #57A64A;
+  }
+  
+  .body {
+    background-color: var(--background);
+  }
+  
+  .text-gray {
+    color: var(--bolds);
+  }
+  
+  .border-gray {
+    border: 1px solid var(--bordercolor);
+  }
+  
+  .texts {
+    color: var(--text);
+  
+    &:focus, &:hover {
+      color: var(--text);
+    }
+  }
+  
+  .n-texts {
+    color: var(--normal-text);
+  }
+  
+  .text-grey {
+    color: gray;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  a.middle {
+    position: relative;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #add8e6;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all .3s ease-in-out;
+    }
+  
+    &:focus:before, &:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+  
+  .bg-custom {
+    background-color: var(--background);
+  }
+  
+  .shadows {
+    box-shadow: 0 0.125rem 0.25rem rgba(var(--shadows), 0.075);
+  }
+  
+  .customswitch {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+
+  ::-webkit-scrollbar-thumb {
+    background: #707a84;
+    border-radius: 10px;
+  
+    &:hover {
+      background: gray;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mt-sm {
+      margin-top: 40px;
+    }
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s infinite;
+  }
+  
+  .bomb:after {
+    content: "\00a0 ";
+    animation: explosion 12s infinite;
+  }
+  
+  @keyframes explosion {
+    0%,34% {
+      content: "Hi,";
+    }
+  
+    36%,66% {
+      content: "I'm suyash";
+    }
+  
+    100%,70% {
+      content: "Developer 🙄";
+    }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+
+
+// ______________________________________________________________
+
+main {
+    display: block;
+    width: 95%;
+    min-width: 18em;
+    margin: 2em auto;
+  }
+  
+  figure {
+    display: block;
+    margin: 1em 0;
+    width: 100%;
+    border: 1px solid var(--pre-line-bg);
+    border-radius: 3px;
+    background: var(--inbox-color);
+  
+    figcaption {
+      display: block;
+      font-family: sans-serif;
+      padding: 5px 10px 4px 10px;
+      border: 1px solid var(--inbox-cap-color);
+      border-radius: 3px 3px 0 0;
+      font-weight: bold;
+      font-variant: small-caps;
+      background: var(--inbox-cap-color);
+    }
+  }
+  
+  .numbers {
+    cursor: context-menu;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: inset 0 0 4px 0 rgba(var(--box-shads), 0.5);
+  }
+  
+  pre {
+    font: normal normal normal 1em/1.4 monaco, courier, monospace;
+  
+    * {
+      font: normal normal normal 1em/1.4 monaco, courier, monospace;
+    }
+  
+    font-size: 0.8em;
+    display: block;
+    margin: 0;
+    cursor: text;
+  
+    code, samp {
+      display: block;
+      margin: 0;
+      cursor: text;
+    }
+  
+    code, samp {
+      /* enforce white-space for IE7 */
+      white-space: pre;
+  
+      /* enforce word-wrap for mobile safari */
+      word-wrap: normal;
+      padding: 10px;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+      overflow-x: auto;
+    }
+  
+
+    &.line-numbers {
+      position: relative;
+  
+      code, samp {
+        margin-left: 2rem;
+        border-left: 1px solid var(--inbox-cap-color);
+      }
+  
+      > div {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 0 0 0 3px;
+        overflow: hidden;
+        counter-reset: line;
+  
+        > span {
+          display: block;
+          width: 2rem;
+          padding: 0 0.5em 0 0;
+          text-align: right;
+          color:var(--number-txt-color);
+          overflow: hidden;
+          counter-increment: line;
+  
+          &::before {
+            content: counter(line);
+          }
+  
+          &:first-child {
+            margin-top: 10px;
+          }
+  
+          &:nth-child(odd) {
+            background: var(--pre-line-bg);
+          }
+        }
+      }
+    }
+  }
+  
+  /* additional focus rules to provide a visual cue */
+  
+  @media print {
+    pre {
+      code {
+        overflow-x: visible;
+        white-space: pre-wrap;
+      }
+  
+      &.line-numbers {
+        div {
+          display: none;
+        }
+  
+        > {
+          code, samp {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  code.hljs {
+    padding-top: 10px;
+  }
+  
+  /* double-up the syntax elements for cross-browser RTF-keystroke support */
+  
+  pre {
+    b, strong {
+      font-weight: normal;
+      color: #039;
+    }
+  
+    u {
+      text-decoration: none;
+      color: #083;
+  
+      b, strong {
+        text-decoration: none;
+        color: #083;
+      }
+    }
+  
+    i, em, i *, em *, i * *, em * * {
+      letter-spacing: -0.1em;
+      text-decoration: none;
+      font-style: normal;
+      color: #c55;
+    }
+  }
+  
+  .hljs {
+    color:  var(--normal-code);
+    background: var(--code-bg);
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+  }
+  
+  .hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet {
+    color: #FF8040;
+  }
+  
+  .hljs-keyword, .hljs-selector-tag, .hljs-deletion {
+    color: var(--keyword-code);
+  }
+  
+  .hljs-variable, .hljs-template-variable, .hljs-link {
+    color: #FF8040;
+  }
+  
+  .hljs-comment, .hljs-quote {
+    color: var(--comment);
+  }
+  
+  .hljs-meta {
+    color: #D2A8A1;
+  }
+  
+  .hljs-string, .hljs-attribute, .hljs-addition {
+    color: #FF0000;
+  }
+  
+  .hljs-section, .hljs-title, .hljs-type {
+    color: #ffc66d;
+  }
+  
+  .hljs-name, .hljs-selector-id, .hljs-selector-class {
+    color: #e8bf6a;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .hljs-strong {
+    font-weight: bold;
+  }
+
+  .dot {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }

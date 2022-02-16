@@ -1,0 +1,17 @@
+:root {
+  --background: #15202b;
+  --text: white;
+  --bolds: white;
+  --shadows: 256, 256, 256;
+  --normal-text: white;
+  --bordercolor: #68686d;
+  --inbox-color: rgb(22, 22, 22);
+  --inbox-cap-color: black;
+  --pre-line-bg: #111;
+  --code-bg : #161b22;
+  --number-txt-color:#777;
+  --box-shads: 0,0,0;
+  --normal-code:#a9b7c6;
+  --keyword-code : #569CD6;
+  --comment: #57A64A;
+}
